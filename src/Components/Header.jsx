@@ -16,31 +16,31 @@ const Header = () => {
         <div className="absolute bottom-2 left-1/2 w-2 h-2 bg-emerald-400 rounded-full animate-bounce"></div>
       </div>
 
-      <nav className="container mx-auto px-6 relative">
-        <div className="flex items-center justify-between h-20">
+      <nav className="container mx-auto px-4 sm:px-6 relative">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo with unique design */}
-          <Link to="/" className="flex items-center gap-3 group relative">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 group relative">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-orange-500 rounded-full blur-md group-hover:blur-lg transition-all duration-300"></div>
-              <div className="relative bg-slate-900 rounded-full p-2 border-2 border-cyan-400 group-hover:border-orange-400 transition-colors duration-300">
-                <span className="text-2xl">�</span>
+              <div className="relative bg-slate-900 rounded-full p-1.5 sm:p-2 border-2 border-cyan-400 group-hover:border-orange-400 transition-colors duration-300">
+                <span className="text-xl sm:text-2xl">💎</span>
               </div>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-orange-400 group-hover:from-orange-400 group-hover:to-cyan-400 transition-all duration-500">
+              <span className="text-lg sm:text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-orange-400 group-hover:from-orange-400 group-hover:to-cyan-400 transition-all duration-500">
                 CRYPTO
               </span>
-              <span className="text-xs font-bold text-slate-400 tracking-widest -mt-1">
+              <span className="text-[10px] sm:text-xs font-bold text-slate-400 tracking-widest -mt-1">
                 MARKET HUB
               </span>
             </div>
           </Link>
 
           {/* Navigation with different style */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <Link
               to="/"
-              className={`group relative px-6 py-2.5 font-bold uppercase tracking-wide text-sm transition-all duration-300 ${
+              className={`group relative px-3 sm:px-6 py-2 sm:py-2.5 font-bold uppercase tracking-wide text-xs sm:text-sm transition-all duration-300 ${
                 isActive('/')
                   ? 'text-slate-900'
                   : 'text-cyan-300 hover:text-orange-300'
@@ -49,9 +49,9 @@ const Header = () => {
               {isActive('/') && (
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-emerald-400 to-orange-400 rounded-lg transform -skew-x-12"></div>
               )}
-              <span className="relative flex items-center gap-2">
+              <span className="relative flex items-center gap-1 sm:gap-2">
                 <span
-                  className={`text-lg ${
+                  className={`text-base sm:text-lg ${
                     isActive('/')
                       ? ''
                       : 'group-hover:rotate-12 transition-transform'
@@ -59,13 +59,13 @@ const Header = () => {
                 >
                   🏠
                 </span>
-                Home
+                <span className="hidden sm:inline">Home</span>
               </span>
             </Link>
 
             <Link
               to="/about"
-              className={`group relative px-6 py-2.5 font-bold uppercase tracking-wide text-sm transition-all duration-300 ${
+              className={`group relative px-3 sm:px-6 py-2 sm:py-2.5 font-bold uppercase tracking-wide text-xs sm:text-sm transition-all duration-300 ${
                 isActive('/about')
                   ? 'text-slate-900'
                   : 'text-cyan-300 hover:text-orange-300'
@@ -74,9 +74,9 @@ const Header = () => {
               {isActive('/about') && (
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-emerald-400 to-cyan-400 rounded-lg transform -skew-x-12"></div>
               )}
-              <span className="relative flex items-center gap-2">
+              <span className="relative flex items-center gap-1 sm:gap-2">
                 <span
-                  className={`text-lg ${
+                  className={`text-base sm:text-lg ${
                     isActive('/about')
                       ? ''
                       : 'group-hover:rotate-12 transition-transform'
@@ -84,7 +84,7 @@ const Header = () => {
                 >
                   ℹ️
                 </span>
-                About
+                <span className="hidden sm:inline">About</span>
               </span>
             </Link>
           </div>

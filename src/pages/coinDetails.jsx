@@ -30,15 +30,15 @@ const CoinDetails = () => {
   }, [id]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-teal-950 to-slate-950 text-white p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-teal-950 to-slate-950 text-white p-4 sm:p-6 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 left-20 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
 
-      <div className="flex justify-center items-center mt-6 relative z-10">
+      <div className="flex justify-center items-center mt-4 sm:mt-6 relative z-10">
         {loading && <Spinner />}
         {error && (
-          <div className="text-red-500 text-center text-xl bg-red-900/20 border border-red-500/50 rounded-xl p-6 backdrop-blur-lg">
+          <div className="text-red-500 text-center text-base sm:text-xl bg-red-900/20 border border-red-500/50 rounded-xl p-4 sm:p-6 backdrop-blur-lg">
             {error}
           </div>
         )}
@@ -71,11 +71,11 @@ const CoinDetails = () => {
                       />
                     </div>
                     <div className="flex-1 text-center md:text-left">
-                      <h1 className="text-5xl font-black mb-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-orange-400">
+                      <h1 className="text-3xl sm:text-5xl font-black mb-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-orange-400">
                         {coin.name}
                       </h1>
                       <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-                        <span className="text-2xl font-bold text-slate-300 uppercase tracking-wider">
+                        <span className="text-lg sm:text-2xl font-bold text-slate-300 uppercase tracking-wider">
                           {coin.symbol}
                         </span>
                         <span className="px-4 py-1 bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 border border-cyan-400/50 rounded-full text-cyan-400 font-bold">
@@ -92,17 +92,17 @@ const CoinDetails = () => {
                 </div>
 
                 {/* Price and Stats Section */}
-                <div className="p-8">
+                <div className="p-4 sm:p-8\">
                   {/* Current Price - Featured */}
                   <div className="mb-8 text-center">
                     <div className="text-sm text-slate-400 uppercase tracking-widest mb-2">
                       Current Price
                     </div>
-                    <div className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400 mb-2">
+                    <div className="text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400 mb-2">
                       ₹{coin.market_data.current_price.inr.toLocaleString()}
                     </div>
                     <div
-                      className={`inline-flex items-center gap-2 text-2xl font-bold px-6 py-2 rounded-full ${
+                      className={`inline-flex items-center gap-2 text-lg sm:text-2xl font-bold px-4 sm:px-6 py-2 rounded-full ${
                         coin.market_data.price_change_percentage_24h >= 0
                           ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-400/50'
                           : 'bg-red-500/20 text-red-400 border border-red-400/50'
@@ -120,7 +120,7 @@ const CoinDetails = () => {
                     {/* Market Cap */}
                     <div className="relative group">
                       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 rounded-xl blur opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                      <div className="relative bg-slate-800/50 border border-cyan-400/30 rounded-xl p-5 hover:border-cyan-400/60 transition-all">
+                      <div className="relative bg-slate-800/50 border border-cyan-400/30 rounded-xl p-4 sm:p-5 hover:border-cyan-400/60 transition-all">
                         <div className="text-sm text-slate-400 uppercase tracking-wider mb-1">
                           Market Cap
                         </div>
@@ -133,7 +133,7 @@ const CoinDetails = () => {
                     {/* Total Supply */}
                     <div className="relative group">
                       <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-orange-500/20 rounded-xl blur opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                      <div className="relative bg-slate-800/50 border border-emerald-400/30 rounded-xl p-5 hover:border-emerald-400/60 transition-all">
+                      <div className="relative bg-slate-800/50 border border-emerald-400/30 rounded-xl p-4 sm:p-5 hover:border-emerald-400/60 transition-all">
                         <div className="text-sm text-slate-400 uppercase tracking-wider mb-1">
                           Total Supply
                         </div>
@@ -148,7 +148,7 @@ const CoinDetails = () => {
                     {/* All-Time High */}
                     <div className="relative group">
                       <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-cyan-500/20 rounded-xl blur opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                      <div className="relative bg-slate-800/50 border border-orange-400/30 rounded-xl p-5 hover:border-orange-400/60 transition-all">
+                      <div className="relative bg-slate-800/50 border border-orange-400/30 rounded-xl p-4 sm:p-5 hover:border-orange-400/60 transition-all">
                         <div className="text-sm text-slate-400 uppercase tracking-wider mb-1">
                           All-Time High
                         </div>
@@ -161,7 +161,7 @@ const CoinDetails = () => {
                     {/* All-Time Low */}
                     <div className="relative group">
                       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 rounded-xl blur opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                      <div className="relative bg-slate-800/50 border border-cyan-400/30 rounded-xl p-5 hover:border-cyan-400/60 transition-all">
+                      <div className="relative bg-slate-800/50 border border-cyan-400/30 rounded-xl p-4 sm:p-5 hover:border-cyan-400/60 transition-all">
                         <div className="text-sm text-slate-400 uppercase tracking-wider mb-1">
                           All-Time Low
                         </div>

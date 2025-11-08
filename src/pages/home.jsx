@@ -67,24 +67,24 @@ const HomePage = ({
 
       <div className="relative z-10">
         <div className="container mx-auto px-4">
-          <div className="text-center py-12">
+          <div className="text-center py-8 sm:py-12 px-4">
             <div className="inline-block mb-4">
-              <div className="flex items-center gap-3 bg-gradient-to-r from-cyan-600/20 to-orange-600/20 backdrop-blur-sm border-2 border-cyan-400/40 rounded-full px-6 py-2 shadow-[0_0_15px_rgba(6,182,212,0.3)]">
-                <span className="relative flex h-3 w-3">
+              <div className="flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-cyan-600/20 to-orange-600/20 backdrop-blur-sm border-2 border-cyan-400/40 rounded-full px-4 sm:px-6 py-2 shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                <span className="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-green-500"></span>
                 </span>
-                <span className="text-sm text-gray-300 font-medium">
+                <span className="text-xs sm:text-sm text-gray-300 font-medium">
                   Live Market Data
                 </span>
               </div>
             </div>
-            <h1 className="text-6xl md:text-7xl font-black tracking-tight leading-tight mb-4">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-tight mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-orange-400 drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">
                 Crypto Dashboard
               </span>
             </h1>
-            <p className="text-gray-300 text-xl max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed px-4">
               Track, analyze, and monitor your favorite cryptocurrencies with{' '}
               <span className="text-cyan-400 font-bold underline decoration-wavy decoration-cyan-400/50">
                 real-time data
@@ -96,36 +96,36 @@ const HomePage = ({
             </p>
 
             {/* Stats Section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-10 max-w-4xl mx-auto px-4">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity"></div>
-                <div className="relative bg-slate-900/90 border-2 border-cyan-400/50 rounded-xl p-6 transform hover:rotate-1 transition-all duration-300">
-                  <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                <div className="relative bg-slate-900/90 border-2 border-cyan-400/50 rounded-xl p-4 sm:p-6 transform hover:rotate-1 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
                     {coins.length}+
                   </div>
-                  <div className="text-slate-300 mt-2 font-semibold tracking-wide">
+                  <div className="text-slate-300 mt-2 font-semibold tracking-wide text-sm sm:text-base">
                     Cryptocurrencies
                   </div>
                 </div>
               </div>
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-orange-500 rounded-xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity"></div>
-                <div className="relative bg-slate-900/90 border-2 border-emerald-400/50 rounded-xl p-6 transform hover:rotate-1 transition-all duration-300">
-                  <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-orange-400">
+                <div className="relative bg-slate-900/90 border-2 border-emerald-400/50 rounded-xl p-4 sm:p-6 transform hover:rotate-1 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-orange-400">
                     24/7
                   </div>
-                  <div className="text-slate-300 mt-2 font-semibold tracking-wide">
+                  <div className="text-slate-300 mt-2 font-semibold tracking-wide text-sm sm:text-base">
                     Real-Time Updates
                   </div>
                 </div>
               </div>
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-cyan-500 rounded-xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity"></div>
-                <div className="relative bg-slate-900/90 border-2 border-orange-400/50 rounded-xl p-6 transform hover:rotate-1 transition-all duration-300">
-                  <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-cyan-400">
+                <div className="relative bg-slate-900/90 border-2 border-orange-400/50 rounded-xl p-4 sm:p-6 transform hover:rotate-1 transition-all duration-300">
+                  <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-cyan-400">
                     100%
                   </div>
-                  <div className="text-slate-300 mt-2 font-semibold tracking-wide">
+                  <div className="text-slate-300 mt-2 font-semibold tracking-wide text-sm sm:text-base">
                     Accurate Data
                   </div>
                 </div>
